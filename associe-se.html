@@ -6,44 +6,12 @@
 <link rel="stylesheet" href="css/style.css">
 </head><body>
 <div class="topbar"><b>APF</b> — Associação Portuguesa de Fundraising</div>
-<header>
-  <div class="wrap">
-    <a class="logo" href="index.html" aria-label="APF — início">APF</a>
-    <nav aria-label="Navegação principal">
-      <a href="sobre.html">Sobre</a>
-      <a href="fazemos.html">O Que Fazemos</a>
-      <a href="noticias-eventos.html">Notícias e Eventos</a>
-      <a href="contactos.html">Contactos</a>
-      <a class="btn btn-primary" href="associe-se.html">Associe-se</a>
-    </nav>
-    <button class="mobile-menu" aria-label="Abrir menu">☰</button>
-  </div>
-</header>
-
+<header><div class="wrap"><a class="logo" href="index.html" aria-label="APF — início">APF</a><nav aria-label="Navegação principal"><a href="sobre.html">Sobre</a><a href="fazemos.html">O Que Fazemos</a><a href="noticias-eventos.html">Notícias e Eventos</a><a href="contactos.html">Contactos</a><a class="btn btn-primary" href="associe-se.html">Associe-se</a></nav></div></header>
 <main>
 <section class="hero"><div class="wrap"><span class="eyebrow">Associe-se</span><h1>Faça parte da construção do setor.</h1><p class="lead" style="margin-top:22px">A associação pretende reunir profissionais e organizações que querem contribuir para um fundraising mais profissional, transparente e ético.</p></div></section>
 <section class="section cream"><div class="wrap"><span class="eyebrow">Porquê associar-se</span><h2>O valor está na comunidade.</h2><div class="grid-2" style="margin-top:34px"><div class="card"><h3>Networking profissional</h3><p>Grupos de trabalho temáticos exclusivos para sócios.</p></div><div class="card"><h3>Acesso a conhecimento</h3><p>Acesso antecipado a estudos e descontos em eventos.</p></div><div class="card"><h3>Voz no setor</h3><p>Representação e defesa dos interesses dos profissionais de fundraising.</p></div><div class="card"><h3>Selo de ética profissional</h3><p>Um compromisso com práticas profissionais e éticas.</p></div></div></div></section>
-<section class="section"><div class="wrap grid-2"><div><span class="eyebrow">Sócio fundador</span><h2>Entre antes do lançamento.</h2><p>A campanha de Sócio Fundador oferece condições especiais para inscrições até ao evento de lançamento previsto para setembro.</p><p><strong>Meta: 100 sócios efetivos até ao final de 2026.</strong></p></div><div class="card"><h3>Tipos de sócio</h3><p>Sócio Efetivo — individual ou associação.</p><p><strong>Quota anual:</strong> valor a definir.</p><div class="notice">O valor das quotas ainda não está definido na proposta. Não deve ser inventado no site.</div></div></div></section>
-<section class="section cream"><div class="wrap form-layout"><div><span class="eyebrow">Inscrição</span><h2>Quero ser sócio.</h2><p>Preencha o formulário. Os dados serão encaminhados para a estrutura de gestão definida pela APF.</p><div class="notice"><strong>Integração futura:</strong> o código já contém um ponto de configuração para um endpoint Google Apps Script ligado a uma Google Sheet. Não coloque aqui o link direto da folha.</div></div>
-<div class="form-card"><form id="membership-form">
-<label for="name">Nome completo</label><input id="name" name="nome" required placeholder="O seu nome">
-<label for="email">Email profissional</label><input id="email" name="email" type="email" required placeholder="nome@organizacao.pt">
-<label for="type">Tipo de sócio</label><select id="type" name="tipo_socio" required><option value="">Selecionar</option><option>Sócio Efetivo — Individual</option><option>Sócio Efetivo — Associação</option></select>
-<label for="org">Organização</label><input id="org" name="organizacao" placeholder="Nome da organização">
-<label for="message">Mensagem</label><textarea id="message" name="mensagem" placeholder="Alguma informação adicional?"></textarea>
-<button class="btn btn-primary" type="submit">Enviar pedido de adesão</button>
-<p id="form-status" class="notice" hidden aria-live="polite"></p></form></div></div></section>
+<section class="section"><div class="wrap grid-2"><div><span class="eyebrow">Sócio fundador</span><h2>Entre antes do lançamento.</h2><p>A campanha de Sócio Fundador oferece condições especiais para inscrições até ao evento de lançamento previsto para setembro.</p><p><strong>Meta: 100 sócios efetivos até ao final de 2026.</strong></p></div><div class="card"><h3>Tipos de inscrição</h3><p>Escolha a modalidade correspondente à sua inscrição.</p><div class="actions" style="margin-top:22px;display:flex;flex-direction:column;align-items:stretch"><a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfI8sgz6AomvvBLIqcKar2PnfVemdt7TF1lghFIL7b_hUtt5g/formResponse" target="_blank" rel="noopener">Inscrição de Novo Sócio — Individual</a><a class="btn btn-secondary" href="https://docs.google.com/forms/d/e/1FAIpQLSfCmUhVSENYV09viLGxUDMzOYxqap_6B33dgF13kA6kQMZFZQ/viewform" target="_blank" rel="noopener">Inscrição de Novo Sócio — Coletivo</a></div></div></div></section>
+<section class="section cream"><div class="wrap"><span class="eyebrow">Inscrição</span><h2>Escolha a modalidade de adesão.</h2><p class="lead" style="margin-top:18px">Os formulários de inscrição são geridos pela APF através do Google Forms.</p><div class="grid-2" style="margin-top:30px"><div class="card"><h3>Sócio Individual</h3><p>Para profissionais que pretendem associar-se individualmente à APF.</p><a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfI8sgz6AomvvBLIqcKar2PnfVemdt7TF1lghFIL7b_hUtt5g/formResponse" target="_blank" rel="noopener">Preencher inscrição individual</a></div><div class="card"><h3>Sócio Coletivo</h3><p>Para organizações que pretendem associar-se à APF.</p><a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfCmUhVSENYV09viLGxUDMzOYxqap_6B33dgF13kA6kQMZFZQ/viewform" target="_blank" rel="noopener">Preencher inscrição coletiva</a></div></div><div class="notice" style="margin-top:28px">Os valores das quotas e outras condições que ainda não estejam definidos pela APF não são apresentados como informação fechada.</div></div></section>
 </main>
-
-<footer>
-  <div class="wrap">
-    <div class="footer-grid">
-      <div><div class="logo" style="color:#fff">APF</div><p>A ponte que liga corações generosos a projetos que transformam vidas.</p></div>
-      <div><h4>Navegação</h4><a href="sobre.html">Sobre</a><a href="fazemos.html">O Que Fazemos</a><a href="associe-se.html">Associe-se</a><a href="noticias-eventos.html">Notícias e Eventos</a></div>
-      <div><h4>Contacto</h4><a href="mailto:geral.fundraising@gmail.com">geral.fundraising@gmail.com</a><span>Morada — a definir</span></div>
-      <div><h4>Redes sociais</h4><span>Em breve</span></div>
-    </div>
-    <div class="footer-bottom"><span>© 2026 Associação Portuguesa de Fundraising</span><span>Website APF</span></div>
-  </div>
-</footer>
-<script src="js/main.js"></script></body></html>
+<footer><div class="wrap"><div class="footer-grid"><div><div class="logo footer-logo">APF</div><p>A ponte que liga corações generosos a projetos que transformam vidas.</p></div><div><h4>Navegação</h4><a href="sobre.html">Sobre</a><a href="fazemos.html">O Que Fazemos</a><a href="associe-se.html">Associe-se</a><a href="noticias-eventos.html">Notícias e Eventos</a></div><div><h4>Contacto</h4><a href="mailto:geral.fundraising@gmail.com">geral.fundraising@gmail.com</a><span>Morada — a definir</span></div><div><h4>Redes sociais</h4><a href="https://www.instagram.com/fundraising.pt/" target="_blank" rel="noopener">Instagram</a></div></div><div class="footer-bottom"><span>© 2026 Associação Portuguesa de Fundraising</span><span>Website APF</span></div></div></footer>
+</body></html>
