@@ -1,0 +1,1 @@
+const APF_LINKS = { instagram: 'https://www.instagram.com/fundraising.pt/', individualMembership: 'https://docs.google.com/forms/d/e/1FAIpQLSfI8sgz6AomvvBLIqcKar2PnfVemdt7TF1lghFIL7b_hUtt5g/formResponse', collectiveMembership: 'https://docs.google.com/forms/d/e/1FAIpQLSfCmUhVSENYV09viLGxUDMzOYxqap_6B33dgF13kA6kQMZFZQ/viewform' };
