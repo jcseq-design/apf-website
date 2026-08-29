@@ -1,46 +1,7 @@
-const GOOGLE_SHEETS_ENDPOINT = "";
-const CONTACT_EMAIL = "geral.fundraising@gmail.com";
-
-document.addEventListener("DOMContentLoaded", () => {
-  const menuButton = document.querySelector(".mobile-menu");
-  const mobileNav = document.querySelector(".mobile-nav");
-  if (menuButton && mobileNav) {
-    menuButton.addEventListener("click", () => {
-      const open = menuButton.getAttribute("aria-expanded") === "true";
-      menuButton.setAttribute("aria-expanded", String(!open));
-      mobileNav.hidden = open;
-      document.body.classList.toggle("menu-open", !open);
-    });
-    mobileNav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
-      menuButton.setAttribute("aria-expanded", "false");
-      mobileNav.hidden = true;
-      document.body.classList.remove("menu-open");
-    }));
-  }
-
-  document.querySelectorAll("form[data-form='contact']").forEach((form) => {
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-      const status = form.querySelector("[data-form-status]");
-      const data = Object.fromEntries(new FormData(form).entries());
-      if (!GOOGLE_SHEETS_ENDPOINT) {
-        const subject = encodeURIComponent(data.assunto || "Contacto através do website APF");
-        const body = encodeURIComponent(`Nome: ${data.nome || ""}\nEmail: ${data.email || ""}\n\n${data.mensagem || ""}`);
-        window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
-        if (status) {
-          status.textContent = "A abrir o seu cliente de email para concluir o envio.";
-          status.hidden = false;
-        }
-        return;
-      }
-      try {
-        await fetch(GOOGLE_SHEETS_ENDPOINT, { method: "POST", mode: "no-cors", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
-        form.reset();
-        if (status) { status.textContent = "Obrigado. A sua mensagem foi enviada."; status.hidden = false; }
-      } catch (error) {
-        if (status) { status.textContent = "Não foi possível enviar a mensagem. Tente novamente."; status.hidden = false; }
-        console.error(error);
-      }
-    });
-  });
+const GOOGLE_SHEETS_ENDPOINT="";
+const CONTACT_EMAIL="geral.fundraising@gmail.com";
+document.addEventListener("DOMContentLoaded",()=>{
+ const menuButton=document.querySelector(".mobile-menu"),mobileNav=document.querySelector(".mobile-nav");
+ if(menuButton&&mobileNav){const setMenu=open=>{menuButton.setAttribute("aria-expanded",String(open));menuButton.setAttribute("aria-label",open?"Fechar menu":"Abrir menu");mobileNav.hidden=!open;document.body.classList.toggle("menu-open",open);};menuButton.addEventListener("click",()=>setMenu(menuButton.getAttribute("aria-expanded")!=="true"));document.addEventListener("keydown",event=>{if(event.key==="Escape"){setMenu(false);menuButton.focus();}});mobileNav.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>setMenu(false)));}
+ document.querySelectorAll("form[data-form='contact']").forEach(form=>form.addEventListener("submit",async event=>{event.preventDefault();const status=form.querySelector("[data-form-status]"),data=Object.fromEntries(new FormData(form).entries());if(!GOOGLE_SHEETS_ENDPOINT){const subject=encodeURIComponent(data.assunto||"Contacto através do website APF"),body=encodeURIComponent("Nome: "+(data.nome||"")+"\nEmail: "+(data.email||"")+"\n\n"+(data.mensagem||""));window.location.href="mailto:"+CONTACT_EMAIL+"?subject="+subject+"&body="+body;if(status){status.textContent="A abrir o seu cliente de email para concluir o envio.";status.hidden=false;}return;}try{await fetch(GOOGLE_SHEETS_ENDPOINT,{method:"POST",mode:"no-cors",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)});form.reset();if(status){status.textContent="Obrigado. A sua mensagem foi enviada.";status.hidden=false;}}catch(error){if(status){status.textContent="Não foi possível enviar a mensagem. Tente novamente.";status.hidden=false;}console.error(error);}}));
 });
