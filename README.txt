@@ -1,23 +1,26 @@
-# APF — Website revisto
+# APF — Website
 
-Estrutura:
+Site estático da Associação Portuguesa de Fundraising.
+
+Páginas:
 - index.html — Home
 - sobre.html — Sobre a APF
 - fazemos.html — O Que Fazemos
-- associe-se.html — Adesão + formulário
-- noticias-eventos.html — Notícias, eventos e calendário
-- contactos.html — Contactos + formulário
-- css/style.css — sistema visual
-- js/main.js — lógica dos formulários
+- associe-se.html — Adesão e inscrições
+- noticias-eventos.html — Notícias e eventos
+- contactos.html — Contactos
+- css/style.css — sistema visual responsivo
+- js/main.js — navegação móvel e formulário de contacto
 
-Integração Google Sheets:
-1. Criar uma Google Sheet.
-2. Criar um Google Apps Script que receba os dados do formulário e escreva uma nova linha na Sheet.
-3. Publicar o Apps Script como Web App.
-4. Colocar o URL do Web App na variável GOOGLE_SHEETS_ENDPOINT em js/main.js.
-5. Testar o envio antes de publicar.
+Identidade visual:
+- Títulos: Stack Sans Notch
+- Corpo: Inter
+- Cores principais: laranja #FF8500 e azul #0C084B
+- Logos e símbolo oficiais em assets/
 
-Nota: o URL da Google Sheet não deve ser colocado diretamente no formulário. O endpoint deve ser uma camada intermédia, como Google Apps Script.
+Formulários:
+- Sócio Individual: Google Forms
+- Sócio Coletivo: Google Forms
+- Contactos: abre o cliente de email do visitante enquanto não existir um endpoint de backend configurado
 
-Conteúdo:
-A arquitetura foi revista com base na proposta da APF, mas a estrutura editorial do HTML foi mantida mais dinâmica. Datas e valores que a proposta deixa como futuros ou "a definir" continuam assinalados como tal.
+A arquitetura editorial usa a proposta da APF como referência, mas organiza o conteúdo como um sistema de navegação web consistente, com CTAs cruzados, hierarquia editorial e layouts responsivos. Informação não confirmada ou localização física não é apresentada como facto.
