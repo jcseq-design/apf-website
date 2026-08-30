@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: /preview-apf-7c9e4b2d/
