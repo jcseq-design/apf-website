@@ -63,3 +63,16 @@ body.modal-open{overflow:hidden}
 
 /* Hierarquia das páginas individuais de notícias */
 .article-page .final-section h4{font-size:clamp(2.3rem,5vw,4.15rem);line-height:1.05;max-width:14ch;color:#fff;margin-left:auto;margin-right:auto}
+
+
+/* Ícones da secção Objetivos */
+.objectives-grid{border-color:rgba(250,222,199,.34)}
+.objective-item{display:grid;grid-template-columns:58px minmax(0,1fr);gap:20px;align-items:start;padding:30px 26px 32px 0;border-bottom:1px solid rgba(250,222,199,.34)}
+.objective-item:nth-child(even){padding-left:26px;border-left:1px solid rgba(250,222,199,.34)}
+.objective-icon{width:52px;height:52px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(250,222,199,.52);color:var(--orange)}
+.objective-icon svg{width:29px;height:29px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.objectives-grid h4{color:#fff;margin:2px 0 12px}
+.objectives-grid p{color:#fff;margin:0;line-height:1.4}
+@media(max-width:620px){
+.objective-item,.objective-item:nth-child(even){padding:26px 0;border-left:0}
+}
