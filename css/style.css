@@ -47,3 +47,6 @@ body.modal-open{overflow:hidden}
 .dialog-grid{grid-template-columns:1fr;gap:30px;padding:48px 24px 34px}
 .dialog-photo{max-width:300px}
 }
+
+/* Grelha editorial: cartões e imagens com dimensões uniformes */
+.news-grid>.card{min-width:0;padding-left:26px!important;padding-right:26px!important}.news-grid .news-card-image{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center;margin:0 0 24px}@media(max-width:620px){.news-grid>.card{padding-left:0!important;padding-right:0!important}}
