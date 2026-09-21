@@ -69,9 +69,44 @@ function setupContactForms() {
   });
 }
 
+
+function setupMemberDialogs() {
+  const dialogs = document.querySelectorAll(".member-dialog");
+
+  if (!dialogs.length) return;
+
+  document.querySelectorAll("[data-dialog]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const dialog = document.getElementById(button.dataset.dialog);
+
+      if (!dialog) return;
+
+      dialog._trigger = button;
+      dialog.showModal();
+      document.body.classList.add("modal-open");
+    });
+  });
+
+  dialogs.forEach((dialog) => {
+    const closeButton = dialog.querySelector(".dialog-close");
+
+    closeButton?.addEventListener("click", () => dialog.close());
+
+    dialog.addEventListener("click", (event) => {
+      if (event.target === dialog) dialog.close();
+    });
+
+    dialog.addEventListener("close", () => {
+      document.body.classList.remove("modal-open");
+      dialog._trigger?.focus();
+    });
+  });
+}
+
 function init() {
   setupMobileMenu();
   setupContactForms();
+  setupMemberDialogs();
 }
 
 document.addEventListener("DOMContentLoaded", init);
