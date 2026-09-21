@@ -23,7 +23,7 @@
 .member-linkedin{display:inline-flex;align-items:center;width:max-content;color:var(--blue);font-size:.88rem;font-weight:800;text-decoration:none;border-bottom:1px solid var(--orange);margin:0}
 .member-linkedin:hover{color:var(--orange-dark)}
 .member-linkedin--disabled{color:var(--muted,#77748d);border-bottom:0;font-weight:600}
-.member-dialog{width:min(920px,calc(100% - 40px));max-height:88vh;margin:auto;padding:0;border:0;border-radius:28px;background:var(--cream);color:var(--text);box-shadow:0 26px 80px rgba(12,8,75,.28);overflow:auto}
+.member-dialog{width:min(920px,calc(100% - 40px));max-height:88vh;margin:auto;padding:0;border:0;border-radius:28px;background:var(--cream);color:var(--blue);box-shadow:0 26px 80px rgba(12,8,75,.28);overflow:auto}
 .member-dialog::backdrop{background:rgba(12,8,75,.68);backdrop-filter:blur(4px)}
 .member-dialog[open]{animation:dialog-in .18s ease-out}
 .dialog-close{position:sticky;z-index:2;top:18px;float:right;margin:18px 18px 0 0;width:42px;height:42px;border:1px solid rgba(12,8,75,.28);border-radius:50%;background:#fff;color:var(--blue);font-size:1.65rem;line-height:1;cursor:pointer}
