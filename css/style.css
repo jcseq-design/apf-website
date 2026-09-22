@@ -80,28 +80,20 @@ body.modal-open{overflow:hidden}
 #documentos .final-split{border-top:0}
 
 
-/* Áreas de atividade sem grelha visível */
-.activity-grid{border-top:0;gap:56px}
-.activity-grid .choice,.activity-grid .choice:nth-child(even){padding:0;border:0;min-height:300px}
-.activity-icon{width:56px;height:56px;display:flex;align-items:center;justify-content:center;color:var(--orange-dark);margin:8px 0 24px;transition:transform .18s ease}
-.activity-icon svg{width:44px;height:44px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
-.activity-grid .choice:hover .activity-icon{transform:translateY(-4px)}
-@media(max-width:620px){
-.activity-grid{gap:44px}
-.activity-grid .choice,.activity-grid .choice:nth-child(even){padding:0;border:0;min-height:auto}
-}
-
-
 /* Áreas de atividade da homepage sem linhas de grelha */
-.home-activity-grid{border-top:0;gap:56px}
-.home-activity-grid>.card,.home-activity-grid>.card:nth-child(even){padding:0;border:0;min-height:250px}
-.home-activity-icon{width:56px;height:56px;display:flex;align-items:center;justify-content:center;color:var(--orange-dark);margin:8px 0 24px;transition:transform .18s ease}
+.home-activity-grid{border-top:0;gap:56px 64px}
+.home-activity-grid>.card,.home-activity-grid>.card:nth-child(even){display:grid;grid-template-columns:56px minmax(0,1fr);grid-template-rows:auto 1fr;column-gap:28px;align-content:start;padding:0;border:0;min-height:220px}
+.home-activity-icon{grid-column:1;grid-row:1 / span 2;width:56px;height:56px;display:flex;align-items:center;justify-content:center;color:var(--orange-dark);margin:0;transition:transform .18s ease}
 .home-activity-icon svg{width:44px;height:44px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.home-activity-grid h3{grid-column:2;align-self:center}
+.home-activity-grid p{grid-column:2;margin-bottom:0}
 .home-activity-grid>.card:hover .home-activity-icon{transform:translateY(-4px)}
 .home-activity-grid>.card:hover{background:transparent}
 @media(max-width:620px){
 .home-activity-grid{gap:44px}
-.home-activity-grid>.card,.home-activity-grid>.card:nth-child(even){padding:0;border:0;min-height:auto}
+.home-activity-grid>.card,.home-activity-grid>.card:nth-child(even){grid-template-columns:48px minmax(0,1fr);column-gap:20px;padding:0;border:0;min-height:auto}
+.home-activity-icon{width:48px;height:48px}
+.home-activity-icon svg{width:38px;height:38px}
 }
 
 /* Última secção da homepage */
