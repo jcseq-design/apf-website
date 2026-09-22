@@ -76,3 +76,5 @@ body.modal-open{overflow:hidden}
 .objectives-grid{gap:36px}
 .objective-item,.objective-item:nth-child(even){padding:0;border:0}
 }
+
+#documentos .final-split{border-top:0}
