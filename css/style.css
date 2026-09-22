@@ -103,3 +103,11 @@ body.modal-open{overflow:hidden}
 .home-activity-grid{gap:44px}
 .home-activity-grid>.card,.home-activity-grid>.card:nth-child(even){padding:0;border:0;min-height:auto}
 }
+
+/* Última secção da homepage */
+.feature.final-section .final-split>div{justify-content:center;text-align:left}
+.feature.final-section .final-split>div:first-child{width:min(100%,42rem);justify-self:center}
+.feature.final-section .final-split>.final-split-side{width:100%;justify-self:center}
+.feature.final-section .final-split-side>.lead{align-self:center;width:100%;margin-left:auto;margin-right:auto}
+.feature.final-section .final-split-side>.btn{align-self:flex-end}
+@media(max-width:980px){.feature.final-section .final-split>div:first-child{width:100%}.feature.final-section .final-split-side>.lead{align-self:flex-start}.feature.final-section .final-split-side>.btn{align-self:flex-start}}
