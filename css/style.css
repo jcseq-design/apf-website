@@ -134,3 +134,9 @@ body.modal-open{overflow:hidden}
 .activity-choice-icon{flex-basis:48px;width:48px;height:48px}
 .activity-choice-icon svg{width:38px;height:38px}
 }
+
+
+/* Título de Órgãos sociais a dois terços do contentor */
+.social-organs-head>div{width:100%}
+.social-organs-head h3{width:66.666%;max-width:none}
+@media(max-width:980px){.social-organs-head h3{width:100%}}
