@@ -90,3 +90,16 @@ body.modal-open{overflow:hidden}
 .activity-grid{gap:44px}
 .activity-grid .choice,.activity-grid .choice:nth-child(even){padding:0;border:0;min-height:auto}
 }
+
+
+/* Áreas de atividade da homepage sem linhas de grelha */
+.home-activity-grid{border-top:0;gap:56px}
+.home-activity-grid>.card,.home-activity-grid>.card:nth-child(even){padding:0;border:0;min-height:250px}
+.home-activity-icon{width:56px;height:56px;display:flex;align-items:center;justify-content:center;color:var(--orange-dark);margin:8px 0 24px;transition:transform .18s ease}
+.home-activity-icon svg{width:44px;height:44px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.home-activity-grid>.card:hover .home-activity-icon{transform:translateY(-4px)}
+.home-activity-grid>.card:hover{background:transparent}
+@media(max-width:620px){
+.home-activity-grid{gap:44px}
+.home-activity-grid>.card,.home-activity-grid>.card:nth-child(even){padding:0;border:0;min-height:auto}
+}
