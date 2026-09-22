@@ -78,3 +78,15 @@ body.modal-open{overflow:hidden}
 }
 
 #documentos .final-split{border-top:0}
+
+
+/* Áreas de atividade sem grelha visível */
+.activity-grid{border-top:0;gap:56px}
+.activity-grid .choice,.activity-grid .choice:nth-child(even){padding:0;border:0;min-height:300px}
+.activity-icon{width:56px;height:56px;display:flex;align-items:center;justify-content:center;color:var(--orange-dark);margin:8px 0 24px;transition:transform .18s ease}
+.activity-icon svg{width:44px;height:44px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.activity-grid .choice:hover .activity-icon{transform:translateY(-4px)}
+@media(max-width:620px){
+.activity-grid{gap:44px}
+.activity-grid .choice,.activity-grid .choice:nth-child(even){padding:0;border:0;min-height:auto}
+}
