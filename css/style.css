@@ -115,3 +115,7 @@ body.modal-open{overflow:hidden}
 .section-head>div>h2,
 .section-head>div>h3{width:100%}
 }
+
+
+/* Secção Quem somos sem linha superior */
+.who-we-are-grid{border-top:0}
