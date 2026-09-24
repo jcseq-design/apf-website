@@ -175,6 +175,6 @@ main section>.wrap:is(.grid-2,.feature-grid,.final-split)>div>.eyebrow+:is(h2,h3
 
 
 /* Transição compacta entre o hero e o corpo das notícias */
-.article-page .article-hero{padding-bottom:28px}
-.article-page .article-section{padding-top:30px}
-@media(max-width:620px){.article-page .article-hero{padding-bottom:22px}.article-page .article-section{padding-top:26px}}
+.article-page .article-hero{padding-bottom:16px}
+.article-page .article-section{padding-top:16px}
+@media(max-width:620px){.article-page .article-hero{padding-bottom:16px}.article-page .article-section{padding-top:16px}}
