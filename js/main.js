@@ -110,3 +110,24 @@ function init() {
 }
 
 document.addEventListener("DOMContentLoaded", init);
+
+
+/* Partilha para Instagram: usa a folha de partilha nativa; em alternativa copia a ligação. */
+document.querySelectorAll('[data-instagram-share]').forEach(function(button){
+  button.addEventListener('click', async function(){
+    var shareData={title:button.dataset.shareTitle||document.title,url:button.dataset.shareUrl||window.location.href};
+    var feedback=button.closest('.article-share')?.querySelector('.share-feedback');
+    try{
+      if(navigator.share){
+        await navigator.share(shareData);
+        if(feedback) feedback.textContent='';
+      }else{
+        await navigator.clipboard.writeText(shareData.url);
+        if(feedback) feedback.textContent='Ligação copiada. Já pode partilhá-la no Instagram.';
+      }
+    }catch(error){
+      if(error && error.name==='AbortError') return;
+      if(feedback) feedback.textContent='Não foi possível abrir a partilha. Copie a ligação da página.';
+    }
+  });
+});
