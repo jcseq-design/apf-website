@@ -172,3 +172,9 @@ main section>.wrap:is(.grid-2,.feature-grid,.final-split)>div>.eyebrow+:is(h2,h3
 .share-feedback{display:block;min-height:1.2em;margin-top:12px;color:var(--blue);font-size:.78rem;font-weight:700}
 @media(max-width:980px){.article-share{width:100%}}
 @media(max-width:620px){.article-share{margin-top:24px}.article-share-links{gap:11px}.article-share .share-action{min-width:40px}.article-share .share-icon{width:32px;height:32px}}
+
+
+/* Transição compacta entre o hero e o corpo das notícias */
+.article-page .article-hero{padding-bottom:28px}
+.article-page .article-section{padding-top:30px}
+@media(max-width:620px){.article-page .article-hero{padding-bottom:22px}.article-page .article-section{padding-top:26px}}
