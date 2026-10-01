@@ -28,3 +28,8 @@ footer .footer-newsletter-note{font-size:16px;line-height:1.4;margin:8px 0 0}
 /* Official Brevo iframe */
 .footer-newsletter{overflow:hidden}.brevo-newsletter-frame{display:block;width:100%;max-width:540px;height:305px;margin:0;border:0;background:transparent}
 @media(max-width:600px){.brevo-newsletter-frame{width:100%;height:360px}}
+
+/* Harmonise compact Brevo embed with APF footer */
+.footer-newsletter{grid-column:3 / 5;max-width:620px;margin-top:4px}.brevo-newsletter-frame{width:100%;max-width:540px;height:190px;margin:0!important;border:0;overflow:hidden;display:block}.footer-grid{row-gap:18px}
+@media(max-width:900px){.footer-newsletter{max-width:540px}.brevo-newsletter-frame{height:190px}}
+@media(max-width:600px){.brevo-newsletter-frame{height:220px}}
