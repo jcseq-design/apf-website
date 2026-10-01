@@ -178,3 +178,7 @@ main section>.wrap:is(.grid-2,.feature-grid,.final-split)>div>.eyebrow+:is(h2,h3
 .article-page .article-hero{padding-bottom:16px}
 .article-page .article-section{padding-top:16px}
 @media(max-width:620px){.article-page .article-hero{padding-bottom:16px}.article-page .article-section{padding-top:16px}}
+
+/* Homepage preview: slightly smaller hero title. */
+.hero-copy h1{font-size:clamp(2.6rem,6vw,5.3rem)}
+@media(max-width:620px){.hero-copy h1{font-size:clamp(2.4rem,12vw,3.6rem)}}
