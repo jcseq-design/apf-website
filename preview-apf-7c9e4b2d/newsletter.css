@@ -33,3 +33,7 @@ footer .footer-newsletter-note{font-size:16px;line-height:1.4;margin:8px 0 0}
 .footer-newsletter{grid-column:3 / 5;max-width:620px;margin-top:4px}.brevo-newsletter-frame{width:100%;max-width:540px;height:190px;margin:0!important;border:0;overflow:hidden;display:block}.footer-grid{row-gap:18px}
 @media(max-width:900px){.footer-newsletter{max-width:540px}.brevo-newsletter-frame{height:190px}}
 @media(max-width:600px){.brevo-newsletter-frame{height:220px}}
+
+/* Final compact sizing after Brevo form simplification */
+.brevo-newsletter-frame{height:305px;overflow:hidden}.footer-newsletter{overflow:hidden}
+@media(max-width:900px){.brevo-newsletter-frame{height:305px}}@media(max-width:600px){.brevo-newsletter-frame{height:305px}}
