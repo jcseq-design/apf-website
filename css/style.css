@@ -202,3 +202,9 @@ main section>.wrap:is(.grid-2,.feature-grid,.final-split)>div>.eyebrow+:is(h2,h3
 
 /* Wider homepage context card, retaining H1 vertical alignment. */
 @media(min-width:981px){.hero-grid{grid-template-columns:minmax(0,3fr) minmax(0,2fr);column-gap:40px}}
+
+/* Newsletter Brevo: alinhada com as colunas Contacto/Redes sociais. */
+.footer-newsletter{grid-column:3 / 5;grid-row:2;width:100%;min-width:0;align-self:start;justify-self:stretch}
+.brevo-newsletter-frame{display:block;width:100%;max-width:none;height:305px;margin:0;border:0;overflow:hidden}
+@media(max-width:980px){.footer-newsletter{grid-column:1 / -1;grid-row:auto}.brevo-newsletter-frame{width:100%;max-width:540px}}
+@media(max-width:620px){.footer-newsletter{grid-column:1}.brevo-newsletter-frame{max-width:100%}}
