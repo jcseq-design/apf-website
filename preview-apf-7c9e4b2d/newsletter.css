@@ -21,3 +21,6 @@ footer .footer-newsletter-note{font-size:16px;line-height:1.4;margin:8px 0 0}
 .footer-newsletter .entry__error{display:block;font-size:13px;margin-top:5px;color:#fadec7}
 @media(max-width:900px){.footer-grid>div:nth-child(n){grid-column:auto;grid-row:auto}.footer-grid>.footer-newsletter{grid-column:1 / -1}}
 @media(max-width:600px){.footer-newsletter-fields{flex-direction:column}.footer-newsletter button{width:100%}}
+
+/* Simple Brevo form: preserve APF footer design */
+.footer-newsletter-fields{align-items:stretch}.footer-newsletter-fields input{height:64px;box-sizing:border-box}.footer-newsletter-fields button{height:64px;box-sizing:border-box;display:flex;align-items:center;justify-content:center}.footer-newsletter .entry__error:empty{display:none}.footer-newsletter .entry__error{margin:6px 0 0;background:transparent!important;border:0!important;padding:0!important;color:#fadec7!important}.footer-newsletter .input--hidden{display:none!important}
