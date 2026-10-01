@@ -199,3 +199,6 @@ main section>.wrap:is(.grid-2,.feature-grid,.final-split)>div>.eyebrow+:is(h2,h3
 .hero-grid .hero-copy>.actions{grid-column:1;grid-row:4}
 .hero-grid>.hero-card{grid-column:2;grid-row:2;align-self:center}
 }
+
+/* Wider homepage context card, retaining H1 vertical alignment. */
+@media(min-width:981px){.hero-grid{grid-template-columns:minmax(0,3fr) minmax(0,2fr);column-gap:40px}}
