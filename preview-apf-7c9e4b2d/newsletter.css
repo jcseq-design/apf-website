@@ -1,6 +1,6 @@
 /* Newsletter Brevo — integração no rodapé APF */
 footer {
-  background: #0D084A !important;
+  background: var(--ink) !important;
 }
 
 .footer-grid {
@@ -28,21 +28,21 @@ footer {
   grid-row: 2;
   align-self: start;
   width: 100%;
-  max-width: 540px;
   min-width: 0;
   margin-top: 4px;
-  overflow: hidden;
-  background: #0D084A;
+  overflow: visible;
+  background: transparent;
 }
 
 .brevo-newsletter-frame {
   display: block;
   width: 100%;
-  max-width: 540px;
-  height: 380px;
+  max-width: 100%;
+  height: 455px;
   margin: 0;
   border: 0;
-  background: #0D084A;
+  overflow: hidden;
+  background: transparent;
 }
 
 @media (max-width: 900px) {
@@ -54,10 +54,14 @@ footer {
   .footer-grid > .footer-newsletter {
     grid-column: 1 / -1;
   }
+
+  .brevo-newsletter-frame {
+    height: 470px;
+  }
 }
 
 @media (max-width: 600px) {
   .brevo-newsletter-frame {
-    height: 400px;
+    height: 500px;
   }
 }
