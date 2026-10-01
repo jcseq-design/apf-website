@@ -24,3 +24,7 @@ footer .footer-newsletter-note{font-size:16px;line-height:1.4;margin:8px 0 0}
 
 /* Simple Brevo form: preserve APF footer design */
 .footer-newsletter-fields{align-items:stretch}.footer-newsletter-fields input{height:64px;box-sizing:border-box}.footer-newsletter-fields button{height:64px;box-sizing:border-box;display:flex;align-items:center;justify-content:center}.footer-newsletter .entry__error:empty{display:none}.footer-newsletter .entry__error{margin:6px 0 0;background:transparent!important;border:0!important;padding:0!important;color:#fadec7!important}.footer-newsletter .input--hidden{display:none!important}
+
+/* Official Brevo iframe */
+.footer-newsletter{overflow:hidden}.brevo-newsletter-frame{display:block;width:100%;max-width:540px;height:305px;margin:0;border:0;background:transparent}
+@media(max-width:600px){.brevo-newsletter-frame{width:100%;height:360px}}
