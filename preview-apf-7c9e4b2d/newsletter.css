@@ -32,9 +32,24 @@ footer {
   margin-top: 4px;
   overflow: visible;
   background: transparent;
+  position: relative;
+}
+
+/* O formulário Brevo usa um azul ligeiramente diferente no próprio iframe.
+   Este fundo igual ao do rodapé fica por cima dessa área para uniformizar
+   visualmente os tons sem afetar os campos e o botão. */
+.footer-newsletter::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--ink);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .brevo-newsletter-frame {
+  position: relative;
+  z-index: 1;
   display: block;
   width: 100%;
   max-width: 100%;
@@ -42,7 +57,8 @@ footer {
   margin: 0;
   border: 0;
   overflow: hidden;
-  background: transparent;
+  background: var(--ink);
+  mix-blend-mode: normal;
 }
 
 @media (max-width: 900px) {
