@@ -1,51 +1,63 @@
-/* Newsletter integrada com Brevo. */
-.footer-grid{grid-template-rows:auto auto;row-gap:24px}
-.footer-grid>div:nth-child(1),.footer-grid>div:nth-child(2){grid-row:1 / 3}
-.footer-grid>div:nth-child(3){grid-column:3;grid-row:1}
-.footer-grid>div:nth-child(4){grid-column:4;grid-row:1}
-.footer-newsletter{grid-column:3 / 5;grid-row:2;align-self:start;min-width:0}
-footer .footer-newsletter h5{text-transform:none;letter-spacing:0;font-size:1.25rem;margin:0 0 12px}
-.footer-newsletter-fields{display:flex;gap:12px;align-items:stretch}
-.footer-newsletter .form__entry{flex:1;min-width:0;margin:0}
-.footer-newsletter .entry__field{width:100%;height:100%;margin:0}
-.footer-newsletter input{box-sizing:border-box;min-width:0;width:100%;height:64px;border:1px solid #fadec7;border-radius:8px;background:transparent;color:#fadec7;padding:0 18px;font:inherit;font-size:18px;line-height:1.2}
-.footer-newsletter input::placeholder{color:#fadec7;opacity:.8}
-.footer-newsletter input:focus-visible{outline:2px solid #ff8500;outline-offset:3px}
-.footer-newsletter button{box-sizing:border-box;height:64px;border:0;border-radius:8px;background:#fadec7;color:#0d084a;padding:0 24px;font:inherit;font-size:18px;line-height:1;white-space:nowrap;cursor:pointer}
-.footer-newsletter button:hover{filter:brightness(.96)}
-.footer-newsletter button:disabled{opacity:.75;cursor:not-allowed}
-footer .footer-newsletter-note{font-size:16px;line-height:1.4;margin:8px 0 0}
-.footer-newsletter .sib-form-message-panel{display:none;margin:8px 0 0;padding:0;background:transparent;border:0;color:#fadec7;font-size:16px;line-height:1.4}
-.footer-newsletter .sib-form-message-panel[style*="display: block"]{display:block!important}
-.footer-newsletter .input--hidden{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important}
-.footer-newsletter .entry__error{display:block;font-size:13px;margin-top:5px;color:#fadec7}
-@media(max-width:900px){.footer-grid>div:nth-child(n){grid-column:auto;grid-row:auto}.footer-grid>.footer-newsletter{grid-column:1 / -1}}
-@media(max-width:600px){.footer-newsletter-fields{flex-direction:column}.footer-newsletter button{width:100%}}
+/* Newsletter Brevo — integração no rodapé APF */
+footer {
+  background: #0D084A !important;
+}
 
-/* Simple Brevo form: preserve APF footer design */
-.footer-newsletter-fields{align-items:stretch}.footer-newsletter-fields input{height:64px;box-sizing:border-box}.footer-newsletter-fields button{height:64px;box-sizing:border-box;display:flex;align-items:center;justify-content:center}.footer-newsletter .entry__error:empty{display:none}.footer-newsletter .entry__error{margin:6px 0 0;background:transparent!important;border:0!important;padding:0!important;color:#fadec7!important}.footer-newsletter .input--hidden{display:none!important}
+.footer-grid {
+  grid-template-rows: auto auto;
+  row-gap: 18px;
+}
 
-/* Official Brevo iframe */
-.footer-newsletter{overflow:hidden}.brevo-newsletter-frame{display:block;width:100%;max-width:540px;height:305px;margin:0;border:0;background:transparent}
-@media(max-width:600px){.brevo-newsletter-frame{width:100%;height:360px}}
+.footer-grid > div:nth-child(1),
+.footer-grid > div:nth-child(2) {
+  grid-row: 1 / 3;
+}
 
-/* Harmonise compact Brevo embed with APF footer */
-.footer-newsletter{grid-column:3 / 5;max-width:620px;margin-top:4px}.brevo-newsletter-frame{width:100%;max-width:540px;height:190px;margin:0!important;border:0;overflow:hidden;display:block}.footer-grid{row-gap:18px}
-@media(max-width:900px){.footer-newsletter{max-width:540px}.brevo-newsletter-frame{height:190px}}
-@media(max-width:600px){.brevo-newsletter-frame{height:220px}}
+.footer-grid > div:nth-child(3) {
+  grid-column: 3;
+  grid-row: 1;
+}
 
-/* Final compact sizing after Brevo form simplification */
-.brevo-newsletter-frame{height:305px;overflow:hidden}.footer-newsletter{overflow:hidden}
-@media(max-width:900px){.brevo-newsletter-frame{height:305px}}@media(max-width:600px){.brevo-newsletter-frame{height:305px}}
+.footer-grid > div:nth-child(4) {
+  grid-column: 4;
+  grid-row: 1;
+}
 
-/* Match iframe viewport to Brevo document and eliminate outer iframe scrollbar */
-.brevo-newsletter-frame{height:420px!important;overflow:hidden!important;background:#0d084a!important}.footer-newsletter{background:#0d084a!important}
-@media(max-width:900px){.brevo-newsletter-frame{height:420px!important}}@media(max-width:600px){.brevo-newsletter-frame{height:440px!important}}
+.footer-newsletter {
+  grid-column: 3 / 5;
+  grid-row: 2;
+  align-self: start;
+  width: 100%;
+  max-width: 540px;
+  min-width: 0;
+  margin-top: 4px;
+  overflow: hidden;
+  background: #0D084A;
+}
 
-/* APF footer + Brevo final visual integration */
-footer{background:#0D084A!important}.footer-newsletter{background:#0D084A!important;overflow:hidden!important}.brevo-newsletter-frame{display:block;width:100%;max-width:540px;height:305px!important;margin:0!important;border:0!important;background:#0D084A!important;overflow:hidden!important}
-@media(max-width:900px){.brevo-newsletter-frame{height:305px!important}}@media(max-width:600px){.brevo-newsletter-frame{height:305px!important}}
+.brevo-newsletter-frame {
+  display: block;
+  width: 100%;
+  max-width: 540px;
+  height: 380px;
+  margin: 0;
+  border: 0;
+  background: #0D084A;
+}
 
-/* Brevo iframe viewport: full form, no internal scrollbar */
-.footer-newsletter{align-self:start;overflow:visible!important}.brevo-newsletter-frame{height:380px!important;overflow:hidden!important;clip-path:inset(0);}
-@media(max-width:900px){.brevo-newsletter-frame{height:380px!important}}@media(max-width:600px){.brevo-newsletter-frame{height:400px!important}}
+@media (max-width: 900px) {
+  .footer-grid > div:nth-child(n) {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .footer-grid > .footer-newsletter {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .brevo-newsletter-frame {
+    height: 400px;
+  }
+}
