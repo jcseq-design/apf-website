@@ -45,3 +45,7 @@ footer .footer-newsletter-note{font-size:16px;line-height:1.4;margin:8px 0 0}
 /* APF footer + Brevo final visual integration */
 footer{background:#0D084A!important}.footer-newsletter{background:#0D084A!important;overflow:hidden!important}.brevo-newsletter-frame{display:block;width:100%;max-width:540px;height:305px!important;margin:0!important;border:0!important;background:#0D084A!important;overflow:hidden!important}
 @media(max-width:900px){.brevo-newsletter-frame{height:305px!important}}@media(max-width:600px){.brevo-newsletter-frame{height:305px!important}}
+
+/* Brevo iframe viewport: full form, no internal scrollbar */
+.footer-newsletter{align-self:start;overflow:visible!important}.brevo-newsletter-frame{height:380px!important;overflow:hidden!important;clip-path:inset(0);}
+@media(max-width:900px){.brevo-newsletter-frame{height:380px!important}}@media(max-width:600px){.brevo-newsletter-frame{height:400px!important}}
