@@ -16,3 +16,5 @@ footer .footer-newsletter-note{font-size:16px;line-height:1.4;margin:8px 0 0}
 @media(max-width:600px){.footer-newsletter-fields{flex-direction:column}.footer-newsletter button{width:100%}}
 
 .footer-newsletter .sib-form-message-panel{display:none;margin:8px 0 0;padding:0;background:transparent;border:0;color:#fadec7;font-size:16px;line-height:1.4}.footer-newsletter .sib-form-message-panel[style*="display: block"]{display:block!important}.footer-newsletter .input--hidden{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important}.footer-newsletter button:not(:disabled){cursor:pointer}.footer-newsletter button:not(:disabled):hover{filter:brightness(.96)}
+
+.footer-newsletter .form__entry{flex:1;min-width:0}.footer-newsletter .entry__field{width:100%}.footer-newsletter .entry__error{display:block;font-size:13px;margin-top:5px;color:#fadec7}.footer-newsletter-fields>.sib-input{flex:1}
