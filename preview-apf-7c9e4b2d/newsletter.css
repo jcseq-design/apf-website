@@ -36,7 +36,8 @@ footer {
   overflow: hidden;
   background: transparent;
   position: relative;
-  transform: translateY(34px);
+  transform: translate(-40px, 34px);
+  width: calc(100% + 40px);
 }
 
 .footer-newsletter::before {
