@@ -211,4 +211,4 @@ main section>.wrap:is(.grid-2,.feature-grid,.final-split)>div>.eyebrow+:is(h2,h3
 
 
 /* Keep GivingTuesday project title on one line on desktop. */
-@media(min-width:981px){.feature .feature-grid>div:first-child>h2{width:auto;max-width:none;white-space:nowrap}}
+@media(min-width:981px){.feature .feature-grid>div:first-child>h2.givingtuesday-title{width:100%;max-width:none;white-space:nowrap;font-size:clamp(2.3rem,4vw,4.1rem);overflow-wrap:normal;word-break:normal}}
