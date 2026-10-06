@@ -36,7 +36,7 @@ footer {
   overflow: hidden;
   background: transparent;
   position: relative;
-  transform: translate(-70px, 14px);
+  transform: translate(-70px, -6px);
   width: calc(100% + 70px);
 }
 
