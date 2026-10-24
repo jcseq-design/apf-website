@@ -27,3 +27,7 @@
   .quota-chevron { transition: none !important; }
   .quota-details::details-content { transition: none !important; }
 }
+/* Align closed disclosures despite descriptions of different lengths. */
+@media (min-width: 981px) {
+  .membership-options > .choice > p { min-height: 3em; }
+}
