@@ -24,5 +24,6 @@
 }
 @media (prefers-reduced-motion: reduce) {
   html:has(.membership-page) { scroll-behavior: auto; }
-  .quota-chevron, .quota-details::details-content { transition: none; }
+  .quota-chevron { transition: none !important; }
+  .quota-details::details-content { transition: none !important; }
 }
